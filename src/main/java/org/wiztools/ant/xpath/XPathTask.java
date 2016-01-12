@@ -56,7 +56,9 @@ public class XPathTask extends Task {
         for (String value : values) {
             result += value + delimiter;
         }
-        result = result.substring(0, result.length() - delimiter.length());
+        if(!"".equals(result)){
+            result = result.substring(0, result.length() - delimiter.length());
+        }
         return result;
     }
 
